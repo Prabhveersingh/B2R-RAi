@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("📤 Upload an Image", type=["jpg", "jpeg", "p
 if uploaded_file:
     # Display uploaded image
     image = Image.open(uploaded_file).convert('RGB')
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
 
     # Preprocess image
     img = image.resize((IMAGE_SIZE, IMAGE_SIZE))
